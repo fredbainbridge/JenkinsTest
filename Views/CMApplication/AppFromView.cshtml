@@ -1,0 +1,24 @@
+﻿@model IEnumerable<CMWebAPI.Models.ApplicationFromDBView>
+
+<h2>Applications</h2>
+
+
+
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Technology</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CI_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Technology)
+            </td>
+        </tr>
+    }
+</table>
